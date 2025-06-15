@@ -1,12 +1,19 @@
+import { Button } from "@/components/ui/button";
+
 export default function heroSection() {
   return (
-    // Background theem
-    <div className="relative bg-yellow-600 w-88 h-120 mt-12">
+   <div>
+
+    {/*  Background theem */}
+    <div className="relative bg-gradient-to-r  from-slate-800 to-cyan-500 w-88 h-120">
+      </div>
       {/* Profile section */}
 
-      <div className="absolute flex gap-8 w-240 left-1/2 top-1/2 transform -translate-y-1/2 border border-black">
+      <div className="absolute lg:px-28 md:px-16 px-4 top-64 flex md:flex-row flex-col items-center justify-between gap-8 w-full ">
         {/* Profile picture */}
-        <div className="flex flex-col bg-blue-300  items-center w-66 gap-2 p-4">
+        
+        <div className="flex flex-col bg-cyan-700 md:w-1/3 w-full  items-center gap-2 p-4">
+         
           <div className="">
             <img
               className="w-44 h-44 rounded-full object-cover"
@@ -22,14 +29,43 @@ export default function heroSection() {
           </div>
         </div>
 
-
         {/* About yourself */}
 
-        <div>
-         <p className="text-6xl font-bold">Hello Everyone ...!</p>
-         <p className="text-lg font-medium">I am Ritesh. So, who am I and what can I do, You can explore here.</p>
+        <div className="space-y-4 md:w-2/3 w-full">
+          <p className="text-6xl font-bold">Hello Everyone ...!</p>
+          <p className="text-lg font-medium">
+            I am Ritesh. So, who am I and what I can do, You can explore here.
+          </p>
+          <div className="flex items-center gap-4">
+            {/* Resume button */}
+            <Button className="bg-cyan-600 hover:text-black border hover:border-cyan-600  hover:bg-white cursor-pointer duration-300 rounded-full">
+              Resume
+            </Button>
+
+            {/* Project button */}
+            <Button className="bg-white text-black border hover:text-white border-cyan-600 hover:bg-cyan-600 cursor-pointer duration-300 rounded-full">
+              Resume
+            </Button>
+          </div>
+
+          {/* about yourself */}
+          <div>
+            <p className="text-lg font-medium">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam,
+              saepe libero aliquid molestiae iste fugit exercitationem quis, id
+              molestias asperiores neque veniam error architecto quisquam!
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus magnam facilis quis pariatur repellat non suscipit eum tenetur. Minus error deleniti provident dicta amet iste.
+            </p>
+          </div>
+
+
         </div>
+
+
       </div>
-    </div>
+
+              </div>
+
+  
   );
 }

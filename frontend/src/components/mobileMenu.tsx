@@ -24,7 +24,7 @@ export default function MobileMenu({ Items }: Imenu) {
       <SheetTrigger>
         <Menu className="text-white" />
       </SheetTrigger>
-      <SheetContent className="bg-gradient-to-b from-pink-600 via-purple-600 to-red-600">
+      <SheetContent className="bg-gradient-to-b from-cyan-600 via-black/90 to-cyan-500">
         <SheetHeader>
           <SheetTitle className="text-white">Ritesh Tamang</SheetTitle>
           <div className="space-y-4 text-center mt-12">

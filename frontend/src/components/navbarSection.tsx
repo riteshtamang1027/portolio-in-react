@@ -3,7 +3,7 @@ import MobileMenu from "./mobileMenu";
 
 export default function NavbarSection() {
   return (
-    <div className="lg:px-28 md:px-16 px-4 w-full z-10 bg-gradient-to-r from-pink-600 via-purple-600 to-red-600  py-4 flex justify-between border-b border-gray-300 shadow-2xl sticky top-0">
+    <div className="lg:px-28 md:px-16 px-4 w-full z-10 bg-gradient-to-r from-cyan-500 via-black to-cyan-500  py-4 flex justify-between border-b border-gray-300 shadow-2xl sticky top-0">
       {/* Logo Section */}
       <NavLink to={"/"} className="flex md:flex-row flex-col items-center md:gap-2 lg:text-xl sm:text-lg text-sm -gap-2 cursor-pointer text-white  w-max ">
         <span className=" font-bold tracking-wide opacity-80 ">
