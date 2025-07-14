@@ -1,6 +1,8 @@
 import { Link } from "react-router";
 import { Avatar, AvatarFallback, AvatarImage } from "../components/ui/avatar";
 import { ModeToggle } from "./modeToggle";
+import MobileMenu from "./mobileMenu";
+
 export default function NavBarSection() {
   return (
     <div className=" xl:px-64 lg:px-32 md:px-16 sm:px-8 px-4 border">
@@ -14,16 +16,31 @@ export default function NavBarSection() {
             />
             <AvatarFallback>CN</AvatarFallback>
           </Avatar>
-          <Link to={"/"}>{"Ritesh Tamang".toUpperCase()}</Link>
+          <Link className="text-sm lg:text-base font-medium" to={"/"}>
+            {"Ritesh Tamang".toUpperCase()}
+          </Link>
         </div>
 
         {/* Left side section */}
         <div className="flex items-center gap-8">
+          {/* web pages */}
           {navItem.map((item, index) => (
-            <Link to={item.url} key={index} className=" cursor-pointer">{item.text.toUpperCase()}</Link>
+            <Link
+              to={item.url}
+              key={index}
+              className=" cursor-pointer hidden md:flex font-medium"
+            >
+              {item.text.toUpperCase()}
+            </Link>
           ))}
+          <div className="flex items-center gap-4">
+            {/* mobile menu */}
+            <MobileMenu/>
+            
 
-          <ModeToggle/>
+            {/* Theme changer */}
+            <ModeToggle />
+          </div>
         </div>
       </div>
     </div>
