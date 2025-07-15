@@ -16,7 +16,7 @@ export default function NavBarSection() {
             />
             <AvatarFallback>CN</AvatarFallback>
           </Avatar>
-          <Link className="text-sm lg:text-base font-medium" to={"/"}>
+          <Link className="text-sm lg:text-base font-bold font-ritesh tracking-widest " to={"/"}>
             {"Ritesh Tamang".toUpperCase()}
           </Link>
         </div>
@@ -28,7 +28,7 @@ export default function NavBarSection() {
             <Link
               to={item.url}
               key={index}
-              className=" cursor-pointer hidden md:flex font-medium"
+              className=" cursor-pointer hidden md:flex font-bold font-ritesh"
             >
               {item.text.toUpperCase()}
             </Link>

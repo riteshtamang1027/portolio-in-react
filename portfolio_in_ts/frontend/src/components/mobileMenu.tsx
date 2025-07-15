@@ -22,7 +22,7 @@ export default function MobileMenu() {
       <SheetContent className="space-y-2">
         <SheetHeader>
           {/* menu title */}
-          <SheetTitle>Menu Bar</SheetTitle>
+          <SheetTitle className="font-ritesh">Menu Bar</SheetTitle>
 
          <div className="space-y-8">
            {/* pages links */}
@@ -32,7 +32,7 @@ export default function MobileMenu() {
                 to={item.url}
                 key={index}
                 onClick={() => setOpen(false)}
-                className="border-b text-center py-1 text-sm"
+                className="border-b text-center py-1 font-ritesh text-sm"
               >
                 {item.text.toUpperCase()}
               </Link>

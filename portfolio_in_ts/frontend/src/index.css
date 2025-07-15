@@ -118,3 +118,17 @@
     @apply bg-background text-foreground;
   }
 }
+
+@font-face{
+  font-family: ritesh;
+  /* src: url("../src/assets/fonts/Rivera-Regular.ttf");
+  src: url("../src/assets/fonts/Rivera-Regular.ttf"); */
+  src: url("../src/assets/fonts/Blood-Regular.otf");
+
+
+}
+
+@theme{
+  --font-ritesh: ritesh;
+
+}
