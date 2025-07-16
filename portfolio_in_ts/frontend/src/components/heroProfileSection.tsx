@@ -1,6 +1,6 @@
 export default function HeroProfileSection() {
   return (
-    <div className="w-full py-4 bg-secondary relative border md:h-108 h-84">
+    <div className="w-full py-4 bg-secondary relative border-b border-gray-400  md:h-108 h-84">
       {/* Background Profile Image */}
       <div className="w-full md:h-64 h-44 mt-4 rounded-sm xl:px-64 lg:px-32 md:px-16 sm:px-8 px-4">
         <img
@@ -22,6 +22,7 @@ export default function HeroProfileSection() {
        
        </div>
       </div>
+      
     </div>
   );
 }

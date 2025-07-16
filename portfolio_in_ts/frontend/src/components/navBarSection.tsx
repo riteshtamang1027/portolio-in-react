@@ -5,7 +5,7 @@ import MobileMenu from "./mobileMenu";
 
 export default function NavBarSection() {
   return (
-    <div className=" xl:px-64 lg:px-32 md:px-16 sm:px-8 px-4 border bg-navcolor/70">
+    <div className=" xl:px-64 lg:px-32 md:px-16 sm:px-8 px-4 border-b border-gray-400 bg-navcolor/90">
       <div className=" py-2 rounded-m flex items-center justify-between ">
         {/* Right side section. */}
         <div className="flex items-center gap-2">
