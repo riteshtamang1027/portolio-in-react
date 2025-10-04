@@ -27,7 +27,7 @@ export default function Navbar() {
 
         {/* left side dive */}
         <div className="p-[1px] rounded-lg bg-gradient-to-r to-gray-600 from-sky-600 ">
-          <button className="flex items-center gap-1 lg:px-3 px-2 lg:py-1 md:py-0.5 rounded-lg lg:text-base text-sm font-semibold cursor-pointer bg-gray-200 text-gray-900">
+          <button className="flex items-center gap-1 lg:px-3 px-2 lg:py-1 md:py-0.5 rounded-md lg:text-base text-sm font-semibold cursor-pointer bg-gray-200 text-gray-900">
             Download CV{" "}
             <Download size={16} strokeWidth={2} className="hidden sm:flex" />
           </button>
