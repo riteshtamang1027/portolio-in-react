@@ -1,1 +1,23 @@
 @import "tailwindcss";
+
+
+.typed-cursor {
+  color: #06b6d4; 
+  font-weight: bold;
+  font-size: 1.5rem;
+   display: inline-block;
+  animation: blink 0.7s infinite, cursorColor 3s infinite;
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+
+@keyframes cursorColor {
+  0% { color: #06b6d4; }    
+   33% { color: #06b6d4; }  
+     66% { color: #06b6d4; }  
+   100% { color: #06b6d4; }  
+ }
