@@ -1,7 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
 import { Download } from "lucide-react";
 
 export default function Navbar() {
+  const [indexActive, setindexActive] = useState(0);
   return (
     <div className="border-b border-gray-700">
       <div className=" flex items-center justify-between lg:px-32 md:px-8 sm:px-16 px-8 py-2">
@@ -18,7 +19,15 @@ export default function Navbar() {
           {navItems.map((item, index) => (
             <p
               key={index}
-              className=" text-gray-100 relative cursor-pointer after:content-[''] after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-0 after:bg-sky-700 after:transition-all after:duration-300 hover:after:w-full hover:text-cyan-500"
+              onClick={()=>setindexActive(index)}
+                className={`relative cursor-pointer transition-all duration-300
+                ${
+                  indexActive === index
+                    ? "text-cyan-500 after:w-full"
+                    : "text-gray-100 hover:text-cyan-500 after:w-0 hover:after:w-full"
+                }
+                after:content-[''] after:absolute after:left-0 after:bottom-0 after:h-[2px] after:bg-sky-700 after:transition-all after:duration-300
+              `}
             >
               {item}
             </p>
