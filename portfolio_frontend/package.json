@@ -10,11 +10,15 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@emotion/react": "^11.14.0",
+    "@emotion/styled": "^11.14.1",
+    "@mui/material": "^7.3.5",
     "@tailwindcss/vite": "^4.1.14",
     "lucide-react": "^0.544.0",
     "motion": "^12.23.24",
     "react": "^19.1.1",
     "react-dom": "^19.1.1",
+    "react-simple-typewriter": "^5.0.1",
     "tailwindcss": "^4.1.14",
     "typed.js": "^2.1.0"
   },
