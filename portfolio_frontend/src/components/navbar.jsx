@@ -10,7 +10,7 @@ import React from "react";
 
 export default function Navbar() {
   return (
-    <div className="relative top-8 left-1/2 transform -translate-x-1/2 w-max px-4 py-2 bg-gray-400/70 shadow-2xl rounded-full ">
+    <div className="relative top-8 left-1/2 transform -translate-x-1/2 w-max px-4 py-2 bg-gray-600/70 shadow-2xl rounded-full ">
       <div className="flex items-center gap-16">
         {icons.map((item, index) => (
         
@@ -28,7 +28,7 @@ export default function Navbar() {
                 },
               }} className="cursor-pointer"
             >
-              <item.icon size={26} className="text-cyan-700" />
+              <item.icon size={26} className="text-cyan-600" strokeWidth={1} />
             </Tooltip>
           
         ))}
