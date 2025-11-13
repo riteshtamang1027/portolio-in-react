@@ -64,8 +64,8 @@ export default function Portfolio_section() {
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay:project.id*0.2  }}
-            whileHover={{ scale: 1.03 }}
-            className="relative bg-gray-900/50 border border-cyan-500/30 rounded-2xl overflow-hidden hover:border-cyan-400/70 transition-all duration-300"
+            // whileHover={{ scale: 1.03 ,duration:0.7}}
+            className="relative bg-gray-900/50 border border-cyan-500/30 rounded-2xl overflow-hidden hover:border-cyan-400/70 transition-all cursor-pointer hover:scale-105 duration-300"
           >
             {/* Project Image */}
             <img
