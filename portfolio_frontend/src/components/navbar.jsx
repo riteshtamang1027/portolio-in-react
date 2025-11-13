@@ -72,7 +72,7 @@ export default function Navbar() {
 const icons = [
   { icon: House, i_name: "Home",path:"/" },
   { icon: UserRound, i_name: "About",path:"/about"  },
-  { icon: FileUser, i_name: "Resume" },
-  { icon: BriefcaseBusiness, i_name: "Portfolio" },
-  { icon: Mail, i_name: "Contact" },
+  { icon: FileUser, i_name: "Resume",path:"/resume" },
+  { icon: BriefcaseBusiness, i_name: "Portfolio",path:"/portfolio" },
+  { icon: Mail, i_name: "Contact",path:"/contact" },
 ];
