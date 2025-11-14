@@ -11,12 +11,12 @@ import {
 
 export default function Footer_section() {
   return (
-    <div className="bg-gradient-to-r from-cyan-900/70 via-cyan-800/70 to-cyan-900/70 text-white py-12 xl:px-64 lg:px-32 md:px-16 px-4 sm:px-32">
+    <div className="bg-gradient-to-r from-cyan-900/70 via-cyan-800/70 to-cyan-900/70 text-gray-300 py-12 xl:px-64 lg:px-32 md:px-16 px-4 sm:px-32">
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-10">
         {/* Brand & Tagline */}
         <div className="space-y-4">
           <h2 className="text-2xl font-bold text-cyan-400">Ritesh Tamang</h2>
-          <p className="text-gray-300 text-sm">
+          <p className=" text-sm">
             Crafting modern web experiences with React, Next.js, and Tailwind
             CSS.
           </p>
@@ -36,15 +36,15 @@ export default function Footer_section() {
           <p className="font-semibold text-cyan-300 uppercase tracking-wider text-sm">Quick Links</p>
           <div className="flex flex-col gap-3">
           {quick_links.map((item, index) => (
-          <div key={index} className="cursor-pointer group border ">
+          <div key={index} className="cursor-pointer w-max px-2    group">
             {/* Icons */}
-            <div className="flex items-center gap-2 group-hover:scale-105 transition-all duration-500">
+            <div className="flex items-center  gap-2 group-hover:scale-110 transition-all duration-500">
               <item.icon className="w-4 h-4 group-hover:text-cyan-600 transition-all duration-500 " />
             {/* names */}
-            {/* <div  className="space-y-1 text-sm"> */}
-              <p className="group-hover:text-cyan-500 space-y-1 text-sm duration-500 transition-all ">{item.i_name}</p>
-              <ArrowUpRight />
-            {/* </div> */}
+            <div  className="text-sm  flex items-center gap-0.5">
+              <p className="group-hover:text-cyan-500 text-sm duration-500 transition-all ">{item.i_name}</p>
+              <ArrowUpRight className="w-4 h-4 group-hover:text-cyan-600 mt-1 duration-500 origin-center group-hover:rotate-45 " />
+            </div>
             </div>
           </div>
         ))}
@@ -54,45 +54,7 @@ export default function Footer_section() {
 
         
 
-        {/* <div className="space-y-2">
-          <p className="font-semibold text-cyan-300 uppercase tracking-wider text-sm">
-            Quick Links
-          </p>
-          <ul className="space-y-1 text-gray-300 text-sm">
-            <li>
-              <a
-                href="/"
-                className="hover:text-cyan-400 transition-all duration-300"
-              >
-                Home
-              </a>
-            </li>
-            <li>
-              <a
-                href="/about"
-                className="hover:text-cyan-400 transition-all duration-300"
-              >
-                About
-              </a>
-            </li>
-            <li>
-              <a
-                href="/projects"
-                className="hover:text-cyan-400 transition-all duration-300"
-              >
-                Projects
-              </a>
-            </li>
-            <li>
-              <a
-                href="/contact"
-                className="hover:text-cyan-400 transition-all duration-300"
-              >
-                Contact
-              </a>
-            </li>
-          </ul>
-        </div> */}
+
 
         {/* Social Media */}
         <div className="space-y-2">
@@ -121,7 +83,7 @@ export default function Footer_section() {
           <p className="font-semibold text-cyan-300 uppercase tracking-wider text-sm">
             Get in Touch
           </p>
-          <p className="text-gray-300 text-sm">
+          <p className=" text-sm">
             Interested in working together? Drop me a message!
           </p>
           <a
