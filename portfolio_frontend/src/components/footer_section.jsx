@@ -16,6 +16,7 @@ import {
 } from "lucide-react";
 import Footer_bottom_section from "./footer_bottom_section";
 import { Link } from "react-router";
+import Message_popup from "./message_popup";
 
 export default function Footer_section() {
   return (
@@ -96,12 +97,8 @@ export default function Footer_section() {
           <p className=" text-sm">
             Interested in working together? Drop me a message!
           </p>
-          <p
-            // href="mailto:your.email@example.com"
-            className="inline-block mt-2 px-5 py-2 rounded-full bg-cyan-500 text-black font-semibold hover:bg-cyan-400 transition-all duration-300"
-          >
-            Email Me
-          </p>
+         
+          <Message_popup/>
         </div>
       </div>
 
