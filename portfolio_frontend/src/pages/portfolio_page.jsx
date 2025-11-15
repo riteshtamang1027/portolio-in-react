@@ -1,6 +1,7 @@
 "use client";
 import { motion } from "framer-motion";
 import { Github, ExternalLink } from "lucide-react";
+import { Link } from "react-router";
 
 export default function Portfolio_section() {
   const projects = [
@@ -84,13 +85,13 @@ export default function Portfolio_section() {
               </p>
 
               <div className="flex gap-4">
-                <a
+                <Link to={"https://github.com/riteshtamang1027/Intern-frontend-ecommerce-project"}
                   href={project.live}
                   target="_blank"
                   className="flex items-center gap-1 text-sm text-black font-semibold bg-cyan-400/90 px-3 py-1 rounded-full hover:bg-cyan-500 transition"
                 >
                   <ExternalLink size={16} /> Live Demo
-                </a>
+                </Link>
                 <a
                   href={project.github}
                   target="_blank"

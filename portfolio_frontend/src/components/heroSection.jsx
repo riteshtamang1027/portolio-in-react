@@ -2,6 +2,7 @@
 import { Typewriter } from "react-simple-typewriter";
 import { motion } from "framer-motion";
 import Socialmedia_icon from "./socialmedia_icon";
+import { Link } from "react-router";
 
 export default function HeroSection() {
   return (
@@ -70,14 +71,14 @@ export default function HeroSection() {
                 transition={{ duration: 2.5 }}
                 className="flex gap-4 justify-center sm:justify-start"
               >
-                <button className="relative overflow-hidden px-5 py-2 rounded-full font-semibold text-black bg-cyan-500/90 cursor-pointer border-transparent border transition-all duration-500 hover:scale-105 hover:text-cyan-400 hover:border-cyan-600 hover:bg-transparent">
-                  <span className="relative z-10 whitespace-nowrap">
+                <Link to={"/resume"} className="relative overflow-hidden px-5 py-2 rounded-full font-semibold text-black bg-cyan-500/90 cursor-pointer border-transparent border transition-all duration-500 hover:scale-105 hover:text-cyan-400 hover:border-cyan-600 hover:bg-transparent">
+                  <span className="relative  whitespace-nowrap">
                     Download CV
                   </span>
-                </button>
-                <button className="px-5 py-2 rounded-full font-semibold text-cyan-400 border border-cyan-500 hover:bg-cyan-500 hover:text-black transition-all duration-500 whitespace-nowrap">
+                </Link>
+                <Link to={"/contact"} className="px-5 py-2 rounded-full font-semibold text-cyan-400 border border-cyan-500 hover:bg-cyan-500 hover:text-black transition-all duration-500 whitespace-nowrap">
                   Contact Me
-                </button>
+                </Link>
               </motion.div>
 
               <Socialmedia_icon />

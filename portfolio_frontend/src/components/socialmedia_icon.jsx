@@ -2,7 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import Tooltip from "@mui/material/Tooltip";
 import { Facebook, Github, Instagram, Linkedin } from "lucide-react";
-
+import { Link } from "react-router";
 
 export default function Socialmedia_icon() {
   return (
@@ -14,7 +14,7 @@ export default function Socialmedia_icon() {
         className="flex items-center max-md:justify-center gap-4"
       >
         {mediaIcon.map((Icon, index) => (
-          <div key={index}>
+          <Link to={Icon.m_url} key={index}>
             <Tooltip
               title={Icon.i_name}
               placement="top"
@@ -40,7 +40,7 @@ export default function Socialmedia_icon() {
                 <Icon.icon className="text-cyan-400 w-5 h-5 md:w-6 md:h-6" />
               </motion.div>
             </Tooltip>
-          </div>
+          </Link>
         ))}
       </motion.div>
     </div>
@@ -49,8 +49,24 @@ export default function Socialmedia_icon() {
 
 // social media icons
 const mediaIcon = [
-  { icon: Facebook, i_name: "Facebook" },
-  { icon: Linkedin, i_name: "LinkedIn" },
-  { icon: Instagram, i_name: "Instagram" },
-  { icon: Github, i_name: "GitHub" },
+  {
+    icon: Facebook,
+    i_name: "Facebook",
+    m_url: "https://www.facebook.com/riteshlama007/",
+  },
+  {
+    icon: Linkedin,
+    i_name: "LinkedIn",
+    m_url: "https://www.linkedin.com/in/ritesh-lama-62887435b",
+  },
+  {
+    icon: Instagram,
+    i_name: "Instagram",
+    m_url: "https://www.instagram.com/riteshlama1027",
+  },
+  {
+    icon: Github,
+    i_name: "GitHub",
+    m_url: "https://github.com/riteshtamang1027",
+  },
 ];

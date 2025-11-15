@@ -19,7 +19,11 @@ import { Link } from "react-router";
 
 export default function Footer_section() {
   return (
-    <div className="bg-gradient-to-r from-cyan-900/70 via-cyan-800/70 -mb-8 to-cyan-900/70 text-gray-300 py-12 xl:px-64 lg:px-32 md:px-16 px-4 sm:px-32">
+    <motion.div
+    initial={{opacity:0,y:400}}
+    whileInView={{opacity:1,y:0}}
+    transition={{duration:1.5}}
+    className="bg-gradient-to-r from-cyan-900/70 via-cyan-800/70 -mb-8 to-cyan-900/70 text-gray-300 py-12 xl:px-64 lg:px-32 md:px-16 px-4 sm:px-32">
       <div className="w-full justify-between mx-auto grid  lg:grid-cols-4 grid-cols-2 lg:gap-10 gap-x-24 gap-y-16">
         {/* Brand & Tagline */}
         <div className="space-y-4">
@@ -104,13 +108,13 @@ export default function Footer_section() {
       {/* Bottom copyright */}
       <Footer_bottom_section />
 
-    </div>
+    </motion.div>
   );
 }
 
 // social icons with links
 const socialIcons = [
-  { icon: Facebook, s_name: "Facebook", url: "https://facebook.com/" },
+  { icon: Facebook, s_name: "Facebook", url: "https://www.facebook.com/riteshlama007/" },
   { icon: Linkedin, s_name: "Linkdin", url: "https://linkedin.com/" },
   { icon: Instagram, s_name: "Instagram", url: "https://instagram.com/" },
   { icon: Github, s_name: "Github", url: "https://github.com/" },
