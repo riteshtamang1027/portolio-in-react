@@ -19,6 +19,7 @@ import "swiper/css/thumbs";
 
 // import required modules
 import { FreeMode, Navigation, Thumbs } from "swiper/modules";
+import { Link } from "react-router";
 
 export default function AboutSection() {
   const [thumbsSwiper, setThumbsSwiper] = useState(null);
@@ -100,7 +101,7 @@ export default function AboutSection() {
        <div className="space-y-4">
          
         <p className="text-gray-300 leading-relaxed">
-          Hi, I’m <span className="text-white font-semibold">Gunshan</span>, a
+          Hi, I’m <span className="text-white font-semibold">Ritesh</span>, a
           passionate{" "}
           <span className="text-cyan-400 font-semibold">
             React and Next.js developer
@@ -130,12 +131,12 @@ export default function AboutSection() {
           designs, or helping my little sister{" "}
           <span className="text-white font-semibold">Kushum</span> with her
           studies. If you’d like to connect or collaborate, feel free to{" "}
-          <a
+          <Link to={"/contact"}
             href="#contact"
             className="text-cyan-400 hover:underline underline-offset-2"
           >
             reach out
-          </a>
+          </Link>
           !
         </p>
        </div>

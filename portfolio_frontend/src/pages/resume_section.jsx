@@ -42,9 +42,9 @@ export default function Resume_section() {
         className="space-y-12"
       >
         {/* Header */}
-        <h2 className="text-3xl md:text-4xl font-bold text-center text-cyan-400">
+        <p className="text-3xl md:text-4xl font-bold text-center text-cyan-400">
           Resume
-        </h2>
+        </p>
 
         {/* Summary */}
         <motion.div
@@ -75,9 +75,9 @@ export default function Resume_section() {
           <p className="text-xl font-semibold text-cyan-400">Skills</p>
           <div className="grid md:grid-cols-2 gap-4">
             {Object.entries(skills).map(([category, items]) => (
-              <div key={category}>
-                <h4 className="text-cyan-300 font-semibold">{category}</h4>
-                <ul className="list-disc list-inside text-sm opacity-90">
+              <div key={category} className="space-y-2">
+                <p className="text-cyan-300 font-semibold">{category}</p>
+                <ul className="list-disc list-inside text-sm opacity-90 space-y-1 px-1">
                   {items.map((item, index) => (
                     <li key={index}>{item}</li>
                   ))}
