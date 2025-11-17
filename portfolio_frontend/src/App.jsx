@@ -1,3 +1,4 @@
+import Category_section from "./components/category_section";
 import HeroSection from "./components/heroSection";
 import Socialmedia_icon from "./components/socialmedia_icon";
 import Techstack_section from "./components/techstack_section";
@@ -9,6 +10,7 @@ export default function App() {
         <HeroSection />
         <Socialmedia_icon />
         <Techstack_section />
+        <Category_section/>
       </div>
     </div>
   );
