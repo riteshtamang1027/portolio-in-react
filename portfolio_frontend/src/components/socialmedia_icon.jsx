@@ -10,14 +10,14 @@ export default function Socialmedia_icon() {
     initial={{ opacity: 0, y: 40 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 2.5, delay: 0.8 }}
-    className="space-y-4">
+    className="space-y-8">
       <p className="text-3xl font-bold max-sm:text-2xl text-cyan-400">
         Social Links
       </p>{" "}
       <motion.div
         initial={{ opacity: 0, y: 40 }}
         whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 2.5, delay: 0.8 }}
+        transition={{ duration: 1, delay: 0.8 }}
         className="flex items-center gap-4"
       >
         {mediaIcon.map((Icon, index) => (
