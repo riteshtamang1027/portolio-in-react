@@ -1,7 +1,6 @@
 "use client";
 import { Typewriter } from "react-simple-typewriter";
 import { motion } from "framer-motion";
-import Socialmedia_icon from "./socialmedia_icon";
 import { Link } from "react-router";
 
 export default function HeroSection() {
@@ -81,7 +80,6 @@ export default function HeroSection() {
                 </Link>
               </motion.div>
 
-              <Socialmedia_icon />
             </div>
           </div>
 

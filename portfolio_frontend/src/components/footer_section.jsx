@@ -21,14 +21,17 @@ import Message_popup from "./message_popup";
 export default function Footer_section() {
   return (
     <motion.div
-    initial={{opacity:0,y:400}}
-    whileInView={{opacity:1,y:0}}
-    transition={{duration:1.5}}
-    className="bg-gradient-to-r from-cyan-900/70 via-cyan-800/70 -mb-8 to-cyan-900/70 text-gray-300 py-12 xl:px-64 lg:px-32 md:px-16 px-4 sm:px-32">
-      <div className="w-full justify-between mx-auto grid  lg:grid-cols-4 grid-cols-2 lg:gap-10 gap-x-24 gap-y-16">
+      initial={{ opacity: 0, y: 80 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 1, delay: 0.5 }}
+      className="bg-gradient-to-r from-cyan-900/70 via-cyan-800/70 -mb-10 to-cyan-900/70 text-gray-300 py-12 xl:px-64 lg:px-32 md:px-16 px-4 sm:px-32"
+    >
+      <div className="w-full justify-between  grid  lg:grid-cols-4 sm:grid-cols-2 grid-cols-1 lg:gap-10 gap-x-24 gap-y-16">
         {/* Brand & Tagline */}
         <div className="space-y-4">
-          <h2 className="text-2xl font-bold text-cyan-400 whitespace-nowrap">Ritesh Tamang</h2>
+          <p className="text-2xl font-bold text-cyan-400 whitespace-nowrap">
+            Ritesh Tamang
+          </p>
           <p className=" text-sm">
             Crafting modern web experiences with React, Next.js, and Tailwind
             CSS.
@@ -51,7 +54,11 @@ export default function Footer_section() {
           </p>
           <div className="flex flex-col gap-3">
             {quick_links.map((item, index) => (
-              <Link to={item.path} key={index} className="cursor-pointer w-max px-2 group">
+              <Link
+                to={item.path}
+                key={index}
+                className="cursor-pointer w-max px-2 group"
+              >
                 {/* Icons */}
                 <div className="flex items-center  gap-2 group-hover:scale-110 transition-all duration-500">
                   <item.icon className="w-4 h-4 group-hover:text-cyan-600 transition-all duration-500 " />
@@ -97,21 +104,24 @@ export default function Footer_section() {
           <p className=" text-sm">
             Interested in working together? Drop me a message!
           </p>
-         
-          <Message_popup/>
+
+          <Message_popup />
         </div>
       </div>
 
       {/* Bottom copyright */}
       <Footer_bottom_section />
-
     </motion.div>
   );
 }
 
 // social icons with links
 const socialIcons = [
-  { icon: Facebook, s_name: "Facebook", url: "https://www.facebook.com/riteshlama007/" },
+  {
+    icon: Facebook,
+    s_name: "Facebook",
+    url: "https://www.facebook.com/riteshlama007/",
+  },
   { icon: Linkedin, s_name: "Linkdin", url: "https://linkedin.com/" },
   { icon: Instagram, s_name: "Instagram", url: "https://instagram.com/" },
   { icon: Github, s_name: "Github", url: "https://github.com/" },

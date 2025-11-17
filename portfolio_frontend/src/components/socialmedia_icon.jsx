@@ -6,12 +6,19 @@ import { Link } from "react-router";
 
 export default function Socialmedia_icon() {
   return (
-    <div>
+    <motion.div
+    initial={{ opacity: 0, y: 40 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 2.5, delay: 0.8 }}
+    className="space-y-4">
+      <p className="text-3xl font-bold max-sm:text-2xl text-cyan-400">
+        Social Links
+      </p>{" "}
       <motion.div
         initial={{ opacity: 0, y: 40 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 2.5, delay: 0.8 }}
-        className="flex items-center max-md:justify-center gap-4"
+        className="flex items-center gap-4"
       >
         {mediaIcon.map((Icon, index) => (
           <Link to={Icon.m_url} key={index}>
@@ -43,7 +50,7 @@ export default function Socialmedia_icon() {
           </Link>
         ))}
       </motion.div>
-    </div>
+    </motion.div>
   );
 }
 
