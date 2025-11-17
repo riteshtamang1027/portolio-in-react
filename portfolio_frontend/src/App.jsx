@@ -1,3 +1,4 @@
+import About_section from "./components/about_section";
 import Category_section from "./components/category_section";
 import HeroSection from "./components/heroSection";
 import Socialmedia_icon from "./components/socialmedia_icon";
@@ -9,6 +10,7 @@ export default function App() {
       <div className="space-y-16">
         <HeroSection />
         <Socialmedia_icon />
+        <About_section/>
         <Techstack_section />
         <Category_section/>
       </div>
