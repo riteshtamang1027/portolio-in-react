@@ -1,5 +1,6 @@
 "use client";
 import { motion } from "framer-motion";
+import img2 from '../../public/images/img2.jpg'
 
 export default function About_section() {
   return (
@@ -14,9 +15,9 @@ export default function About_section() {
           className="md:w-1/3"
         >
           <img
-            src="https://images.unsplash.com/photo-1654110455429-cf322b40a906?ixlib=rb-4.1.0&auto=format&fit=crop&q=60&w=600"
+            src={img2}
             alt="About Me"
-            className="md:w-full h-120 w-88 auto object-cover rounded-2xl shadow-lg"
+            className="md:w-full h-110 w-90 auto object-cover rounded-2xl shadow-lg"
           />
         </motion.div>
 

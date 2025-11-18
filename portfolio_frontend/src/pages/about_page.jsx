@@ -9,6 +9,12 @@ import {
 } from "react-icons/si";
 import Tooltip from "@mui/material/Tooltip";
 
+// image import 
+import img1 from '../../public/images/img3.jpg';
+import img2 from '../../public/images/img5.jpeg';
+import img3 from '../../public/images/img4.jpg';
+
+
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
 
@@ -194,15 +200,15 @@ const icons = [
 
 const Images = [
   {
-    url: "https://plus.unsplash.com/premium_photo-1726714601217-b9268de01ca7?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8ZGV2ZWxvcGVyJTIwaW1hZ2V8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&q=60&w=600",
-    im_name: "mage1I",
+    url: img1,
+    im_name: "mage1",
   },
   {
-    url: "https://images.unsplash.com/photo-1565687981296-535f09db714e?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fGRldmVsb3BlciUyMGltYWdlfGVufDB8fDB8fHww&auto=format&fit=crop&q=60&w=600",
+    url: img2,
     im_name: "Image2",
   },
   {
-    url: "https://images.unsplash.com/photo-1617791160530-fb48acfc1658?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTV8fGRldmVsb3BlciUyMGltYWdlfGVufDB8fDB8fHww&auto=format&fit=crop&q=60&w=600",
+    url: img3,
     im_name: "Image3",
   },
 ];
