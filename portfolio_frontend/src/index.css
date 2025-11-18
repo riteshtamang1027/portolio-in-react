@@ -1,12 +1,10 @@
 @import "tailwindcss";
 
-
-
 .typed-cursor {
-  color: #06b6d4; 
+  color: #06b6d4;
   font-weight: bold;
   font-size: 1.5rem;
-   display: inline-block;
+  display: inline-block;
   animation: blink 0.7s infinite, cursorColor 3s infinite;
 }
 
@@ -16,15 +14,26 @@
   }
 }
 
-@keyframes cursorColor {
+/* @keyframes cursorColor {
   0% { color: #06b6d4; }    
    33% { color: #06b6d4; }  
      66% { color: #06b6d4; }  
    100% { color: #06b6d4; }  
- }
+ } */
+
+html.dark {
+  --text-primary: #ffffff;
+  --text-secondary:oklch(71.5% 0.143 215.221);
+  --text-hover:oklch(78.9% 0.154 211.53);
+  --border-radious:oklch(60.9% 0.126 221.723);
+--shadow-primary: 0 0 25px rgba(34, 211, 238, 0.4);
+
+  /* shadow & border */
+  --shadow-glow: 0 0 35px rgba(34, 211, 238, 0.6);
+  --border-color: #0ea5e9;
 
 
- html.dark {
+  /* gradient sectiion */
   --custom-a0: #1a123d;
   --custom-a10: #1e2341;
   --custom-a20: #172a47;
@@ -32,16 +41,26 @@
   --custom-a40: #203248;
 }
 
-html.light {
-  --custom-a0: #ffffff;
-  --custom-a10: #f7f7f7;
-  --custom-a20: #efefef;
-  --custom-a30: #e5e5e5;
-  --custom-a40: #dcdcdc;
+:root {
+  --text-primary: #0f172a;
+  --text-secondary:oklch(58.5% 0.233 277.117);
+  --text-hover:oklch(51.1% 0.262 276.966);
+  --border-radious:oklch(51.1% 0.262 276.966);
+  --shadow-primary: 0 0 25px rgba(124, 58, 237, 0.35);
+
+    /* shadow & border (light mode) */
+  --shadow-glow: 0 0 35px rgba(130, 70, 233, 0.684);
+  --border-color: #6b33f6;
+
+  /* gradient sectiion */
+  --custom-a0: #faf7ff;
+  --custom-a10: #ede7ff;
+  --custom-a20: #dcd7ff;
+  --custom-a30: #c9c8ff;
+  --custom-a40: #b6b8ff;
 }
 
-
-.bg-dark {
+.bg-gradient {
   background: linear-gradient(
     to right,
     var(--custom-a0),
@@ -52,23 +71,9 @@ html.light {
   );
 }
 
-.bg-light {
-  background: linear-gradient(
-    to right,
-    var(--custom-a0),
-    var(--custom-a10),
-    var(--custom-a20),
-    var(--custom-a30),
-    var(--custom-a40)
-  );
-}
-
-
-
- /* html.dark{
+/* html.dark{
   --bg-primary: [linear-gradient(to_right,var(--custom-a0),var(--custom-a10),var(--custom-a20),var(--custom-a30),var(--custom-a40))];
   --bg-secondary: #1e293b;
   --text-primary: #ffffff;
   --accent: #06b6d4;
  } */
-

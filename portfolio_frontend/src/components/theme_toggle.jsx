@@ -1,15 +1,18 @@
-import React, { useContext } from "react";
+import  { useContext } from "react";
 import { ThemeContext } from "../theme_provider";
+import { Moon, SunMedium } from "lucide-react";
 
 export default function Theme_toggle() {
   const { theme, toggleTheme } = useContext(ThemeContext);
 
   return (
-    <button
+    <div className="sticky">
+        <button
       onClick={toggleTheme}
-      className="px-4 py-2 rounded-full bg-cyan-500 text-black font-bold"
+      className=" p-2 rounded-full bg-gradient text-[var(--text-secondary)] cursor-pointer border border-[var(--border-radious)] "
     >
-      {theme === "dark" ? "Light Mode" : "Dark Mode"}
+      {theme === "dark" ? <SunMedium className="w-6 h-6 max-md:w-4 max-md:h-4"/> : <Moon className="w-6 h-6 max-md:w-4 max-md:h-4"/>}
     </button>
+    </div>
   );
 }

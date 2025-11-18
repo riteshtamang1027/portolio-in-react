@@ -11,14 +11,18 @@ import Contact_section from "./pages/contact_page.jsx";
 import Portfolio_section from "./pages/portfolio_page.jsx";
 import Footer_section from "./components/footer_section.jsx";
 import { Theme_provider } from "./theme_provider.jsx";
+import Theme_toggle from "./components/theme_toggle.jsx";
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
     <Theme_provider>
       <BrowserRouter>
-        <div className="sticky top-0 z-10 bg-[linear-gradient(to_right,var(--custom-a0),var(--custom-a10),var(--custom-a20),var(--custom-a30),var(--custom-a40))]">
+        <div className="sticky top-0 z-10 bg-gradient">
           <Navbar />
         </div>
+       <div className="fixed md:right-1/12 right-8 top-1/2 -translate-y-1/2 z-50">
+         <Theme_toggle/>
+       </div>
         <Routes>
           <Route path="/" element={<App />} />
           <Route path="/about" element={<AboutSection />} />
