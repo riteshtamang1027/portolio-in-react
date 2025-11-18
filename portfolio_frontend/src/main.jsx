@@ -17,7 +17,7 @@ createRoot(document.getElementById("root")).render(
   <StrictMode>
     <Theme_provider>
       <BrowserRouter>
-        <div className="sticky top-0 z-10 bg-gradient">
+        <div className="sticky top-0 z-10 footer-gradient">
           <Navbar />
         </div>
        <div className="fixed md:right-1/12 right-8 top-1/2 -translate-y-1/2 z-50">

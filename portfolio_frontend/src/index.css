@@ -71,8 +71,8 @@ html.dark {
 
 
     /* shadow & border (light mode) */
-  --shadow-glow: 0 0 35px rgba(130, 70, 233, 0.684);
-  --border-color: #6b33f6;
+  --shadow-glow: 0 0 35px rgba(133, 74, 234, 0.684);
+  --border-color: #7340f3;
   --tooltip-color:oklch(96.7% 0.003 264.542);
 
 

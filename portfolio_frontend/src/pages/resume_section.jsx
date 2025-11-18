@@ -34,7 +34,7 @@ export default function Resume_section() {
   ];
 
   return (
-    <div className="text-white min-h-screen w-full py-12 xl:px-64 lg:px-32 md:px-16 px-8 sm:px-32 bg-[linear-gradient(to_right,var(--custom-a0),var(--custom-a10),var(--custom-a20),var(--custom-a30),var(--custom-a40))]">
+    <div className="text-[var(--text-primary)] min-h-screen w-full py-12 xl:px-64 lg:px-32 md:px-16 px-8 sm:px-32 bg-gradient">
       <motion.div
         initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -42,7 +42,7 @@ export default function Resume_section() {
         className="space-y-12"
       >
         {/* Header */}
-        <p className="text-3xl md:text-4xl font-bold text-center text-cyan-400">
+        <p className="text-3xl md:text-4xl font-bold text-center text-[var(--text-secondary)]">
           Resume
         </p>
 
@@ -51,9 +51,9 @@ export default function Resume_section() {
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 1 }}
-          className="bg-gray-800/40 border border-cyan-400/20 rounded-2xl p-6 shadow-lg space-y-4"
+          className="bg-[var(--bg-secondary)]/40 border border-[var(--border-radious)]/50 rounded-2xl p-6 shadow-lg space-y-4"
         >
-          <p className="text-xl font-semibold text-cyan-400 ">
+          <p className="text-xl font-semibold text-[var(--text-secondary)] ">
             Professional Summary
           </p>
           <p className="text-sm md:text-base opacity-90 leading-relaxed">
@@ -70,13 +70,13 @@ export default function Resume_section() {
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 1 }}
-          className="bg-gray-800/40 border border-cyan-400/20 rounded-2xl p-6 shadow-lg space-y-4"
+          className="bg-[var(--bg-secondary)]/40 border border-[var(--border-radious)]/50 rounded-2xl p-6 shadow-lg space-y-4"
         >
-          <p className="text-xl font-semibold text-cyan-400">Skills</p>
+          <p className="text-xl font-semibold text-[var(--text-secondary)]">Skills</p>
           <div className="grid md:grid-cols-2 gap-4">
             {Object.entries(skills).map(([category, items]) => (
               <div key={category} className="space-y-2">
-                <p className="text-cyan-300 font-semibold">{category}</p>
+                <p className="text-[var(--text-secondary)]/90 font-semibold">{category}</p>
                 <ul className="list-disc list-inside text-sm opacity-90 space-y-1 px-1">
                   {items.map((item, index) => (
                     <li key={index}>{item}</li>
@@ -92,13 +92,13 @@ export default function Resume_section() {
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 1 }}
-          className="bg-gray-800/40 border border-cyan-400/20 rounded-2xl p-6 shadow-lg space-y-4"
+         className="bg-[var(--bg-secondary)]/40 border border-[var(--border-radious)]/50 rounded-2xl p-6 shadow-lg space-y-4"
         >
-          <p className="text-xl font-semibold text-cyan-400">
+          <p className="text-xl font-semibold text-[var(--text-secondary)]">
             Education
           </p>
          <div className="space-y-1">
-             <p className="font-semibold text-base">
+             <p className="font-semibold text-base opacity-90">
             Bachelor of Science in Information Technology (Honours) BSc (Hons) IT.
           </p>
           <p className="text-sm opacity-80">
@@ -112,32 +112,32 @@ export default function Resume_section() {
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 1 }}
-          className="bg-gray-800/40 border border-cyan-400/20 rounded-2xl p-6 shadow-lg space-y-4"
+          className="bg-[var(--bg-secondary)]/40 border border-[var(--border-radious)]/50 rounded-2xl p-6 shadow-lg space-y-4"
         >
-          <p className="text-xl font-semibold text-cyan-400 ">Projects</p>
-          <div className="grid md:grid-cols-2 gap-6">
+          <p className="text-xl font-semibold text-[var(--text-secondary)] ">Projects</p>
+          <div className="grid md:grid-cols-2 gap-12">
             {projects.map((project, index) => (
               <motion.div
                 key={index}
                 whileHover={{
-                  scale: 1.03,
-                  borderColor: "#22d3ee",
-                  boxShadow: "0 0 12px rgba(34, 211, 238, 0.3)",
+                  scale:1.05,
+                   borderColor: "var(--border-color)",
+                  boxShadow: "var(--shadow-glow)",
                 }}
-                className="border border-cyan-400/30 rounded-xl p-4 transition cursor-pointer space-y-4"
+                className="border border-[var(--border-radious)] rounded-xl p-4  cursor-pointer space-y-4  duration-500 transition-all"
               >
-                <p className="text-cyan-300 font-semibold">
+                <p className="text-[var(--text-secondary)]/90 font-semibold">
                   {project.title}
                 </p>
               
                <div className="space-y-1">
                  <p className="text-sm opacity-90 ">{project.description}</p>
-                <p className="text-xs text-cyan-200 italic">{project.tech}</p>
+                <p className="text-xs text-[var(--text-secondary)]/60 italic">{project.tech}</p>
                 <a
                   href={project.link}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-cyan-400 text-xs underline inline-block hover:text-cyan-300"
+                  className="text-[var(--text-secondary)] text-xs underline inline-block hover:text-[var(--text-secondary)]/80"
                 >
                   View Project →
                 </a>
@@ -152,9 +152,9 @@ export default function Resume_section() {
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 1 }}
-          className="bg-gray-800/40 border border-cyan-400/20 rounded-2xl p-6 shadow-lg space-y-4"
+         className="bg-[var(--bg-secondary)]/40 border border-[var(--border-radious)]/50 rounded-2xl p-6 shadow-lg space-y-4"
         >
-          <p className="text-xl font-semibold text-cyan-400">
+          <p className="text-xl font-semibold text-[var(--text-secondary)]">
             Certificates
           </p>
           <ul className="list-disc list-inside text-sm opacity-90 space-y-1">
@@ -170,10 +170,11 @@ export default function Resume_section() {
             href="/Ritesh_Tamang_CV.pdf" // replace with your actual file path
             download
             whileHover={{
-              scale: 1.1,
-              boxShadow: "0 0 15px rgba(34, 211, 238, 0.5)",
+              scale: 1.05,
+              boxShadow: "var(--shadow-glow)",
+
             }}
-            className="flex items-center gap-2 bg-cyan-500 text-black font-semibold px-6 py-2 rounded-full hover:bg-transparent hover:text-cyan-400 border border-transparent hover:border-cyan-400 transition-all duration-500"
+            className="flex items-center gap-2 bg-[var(--text-secondary)] text-[var(--tooltip-color)] font-semibold px-6 py-2 rounded-full hover:bg-transparent hover:text-[var(--text-hover)] border border-transparent hover:border-[var(--border-radious)] transition-all duration-500"
           >
             <Download className="w-5 h-5" /> Download Resume
           </motion.a>
