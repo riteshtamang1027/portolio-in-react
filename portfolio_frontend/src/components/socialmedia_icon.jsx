@@ -11,7 +11,7 @@ export default function Socialmedia_icon() {
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 2.5, delay: 0.8 }}
     className="space-y-8">
-      <p className="text-3xl font-bold max-sm:text-2xl text-cyan-400">
+      <p className="text-3xl font-bold max-sm:text-2xl text-[var(--text-secondary)]">
         Social Links
       </p>{" "}
       <motion.div
@@ -28,7 +28,7 @@ export default function Socialmedia_icon() {
               componentsProps={{
                 tooltip: {
                   sx: {
-                    bgcolor: "#06b6d4",
+                    bgcolor: "var(--text-secondary)",
                     color: "black",
                     fontSize: "0.7rem",
                   },
@@ -38,13 +38,13 @@ export default function Socialmedia_icon() {
               <motion.div
                 whileHover={{
                   scale: 1.2,
-                  borderColor: "#22d3ee",
-                  boxShadow: "0px 0px 18px rgba(34,211,238,0.5)",
+                  borderColor: "var(--border-color)",
+                  boxShadow: "var(--shadow-glow)",
                 }}
                 transition={{ type: "spring", stiffness: 200, damping: 15 }}
-                className="border p-2 rounded-full border-cyan-500 cursor-pointer"
+                className="border p-2 rounded-full border-[var(--border-radious)] cursor-pointer"
               >
-                <Icon.icon className="text-cyan-400 w-5 h-5 md:w-6 md:h-6" />
+                <Icon.icon className="text-[var(--text-secondary)] w-5 h-5 md:w-6 md:h-6" />
               </motion.div>
             </Tooltip>
           </Link>
