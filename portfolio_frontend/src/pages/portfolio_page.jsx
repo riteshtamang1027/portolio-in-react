@@ -8,7 +8,8 @@ export default function Portfolio_section() {
     {
       id: 1,
       title: "Next.js Blog Platform",
-      description: "A full-stack blog app built with Next.js, Drizzle ORM, and Cloudinary for image uploads.",
+      description:
+        "A full-stack blog app built with Next.js, Drizzle ORM, and Cloudinary for image uploads.",
       image:
         "https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&q=80&w=1000",
       github: "https://github.com/yourusername/blog-platform",
@@ -17,7 +18,8 @@ export default function Portfolio_section() {
     {
       id: 2,
       title: "Portfolio Website",
-      description: "My personal portfolio showcasing projects, animations, and contact form.",
+      description:
+        "My personal portfolio showcasing projects, animations, and contact form.",
       image:
         "https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&q=80&w=1000",
       github: "https://github.com/yourusername/portfolio",
@@ -26,7 +28,8 @@ export default function Portfolio_section() {
     {
       id: 3,
       title: "E-Commerce Store",
-      description: "Modern e-commerce web app built using React, Redux, and TailwindCSS.",
+      description:
+        "Modern e-commerce web app built using React, Redux, and TailwindCSS.",
       image:
         "https://images.unsplash.com/photo-1581090700227-1e37b190418e?auto=format&fit=crop&q=80&w=1000",
       github: "https://github.com/yourusername/ecommerce",
@@ -47,13 +50,12 @@ export default function Portfolio_section() {
         className="text-center mb-12"
       >
         <div className="space-y-2">
-            
-        <p className="text-3xl md:text-4xl font-bold text-cyan-400">
-          My Projects
-        </p>
-        <p className="text-gray-300 ">
-          A few of the things I’ve built recently
-        </p>
+          <p className="text-3xl md:text-4xl font-bold text-[var(--text-secondary)]">
+            My Projects
+          </p>
+          <p className="text-[var(--text-primary)]/80 ">
+            A few of the things I’ve built recently
+          </p>
         </div>
       </motion.div>
 
@@ -64,9 +66,9 @@ export default function Portfolio_section() {
             key={project.id}
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, delay:project.id*0.2  }}
+            transition={{ duration: 0.7, delay: project.id * 0.2 }}
             // whileHover={{ scale: 1.03 ,duration:0.7}}
-            className="relative bg-gray-900/50 border border-cyan-500/30 rounded-2xl overflow-hidden hover:border-cyan-400/70 transition-all cursor-pointer hover:scale-105 duration-300"
+            className="relative bg-[var(--bg-secondary)] border border-[var(--border-radious)] rounded-2xl overflow-hidden hover:border-[var(--border-color)] transition-all cursor-pointer hover:scale-105 duration-300"
           >
             {/* Project Image */}
             <img
@@ -77,25 +79,28 @@ export default function Portfolio_section() {
 
             {/* Content */}
             <div className="p-4 space-y-4">
-              <p className="text-xl font-semibold text-cyan-400">
+              <p className="text-xl font-semibold text-[var(--text-secondary)]">
                 {project.title}
               </p>
-              <p className="text-gray-300 text-sm leading-relaxed">
+              <p className="text-[var(--text-primary)]/70 text-sm leading-relaxed">
                 {project.description}
               </p>
 
               <div className="flex gap-4">
-                <Link to={"https://github.com/riteshtamang1027/Intern-frontend-ecommerce-project"}
+                <Link
+                  to={
+                    "https://github.com/riteshtamang1027/Intern-frontend-ecommerce-project"
+                  }
                   href={project.live}
                   target="_blank"
-                  className="flex items-center gap-1 text-sm text-black font-semibold bg-cyan-400/90 px-3 py-1 rounded-full hover:bg-cyan-500 transition"
+                  className="flex items-center gap-1 text-sm text-[var(--tooltip-color)] font-semibold bg-[var(--text-secondary)] px-3 py-1 rounded-full hover:bg-transparent hover:border hover:border-[var(--border-color)] hover:text-[var(--text-hover)] transition-all"
                 >
                   <ExternalLink size={16} /> Live Demo
                 </Link>
                 <a
                   href={project.github}
                   target="_blank"
-                  className="flex items-center gap-1 text-sm text-cyan-400 font-semibold border border-cyan-400 px-3 py-1 rounded-full hover:bg-cyan-400/10 transition"
+                  className="flex items-center gap-1 text-sm text-[var(--text-secondary)] font-semibold border border-[var(--border-radious)] px-3 py-1 rounded-full hover:bg-[var(--text-hover)]/80 hover:text-[var(--tooltip-color)] transition-all duration-500"
                 >
                   <Github size={16} /> GitHub
                 </a>

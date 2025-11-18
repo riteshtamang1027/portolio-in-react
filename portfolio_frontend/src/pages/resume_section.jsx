@@ -72,11 +72,15 @@ export default function Resume_section() {
           transition={{ duration: 1 }}
           className="bg-[var(--bg-secondary)]/40 border border-[var(--border-radious)]/50 rounded-2xl p-6 shadow-lg space-y-4"
         >
-          <p className="text-xl font-semibold text-[var(--text-secondary)]">Skills</p>
+          <p className="text-xl font-semibold text-[var(--text-secondary)]">
+            Skills
+          </p>
           <div className="grid md:grid-cols-2 gap-4">
             {Object.entries(skills).map(([category, items]) => (
               <div key={category} className="space-y-2">
-                <p className="text-[var(--text-secondary)]/90 font-semibold">{category}</p>
+                <p className="text-[var(--text-secondary)]/90 font-semibold">
+                  {category}
+                </p>
                 <ul className="list-disc list-inside text-sm opacity-90 space-y-1 px-1">
                   {items.map((item, index) => (
                     <li key={index}>{item}</li>
@@ -92,19 +96,21 @@ export default function Resume_section() {
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 1 }}
-         className="bg-[var(--bg-secondary)]/40 border border-[var(--border-radious)]/50 rounded-2xl p-6 shadow-lg space-y-4"
+          className="bg-[var(--bg-secondary)]/40 border border-[var(--border-radious)]/50 rounded-2xl p-6 shadow-lg space-y-4"
         >
           <p className="text-xl font-semibold text-[var(--text-secondary)]">
             Education
           </p>
-         <div className="space-y-1">
-             <p className="font-semibold text-base opacity-90">
-            Bachelor of Science in Information Technology (Honours) BSc (Hons) IT.
-          </p>
-          <p className="text-sm opacity-80">
-            Asia Pacific University of Technology and Innovation (APU) — 2025–Present
-          </p>
-         </div>
+          <div className="space-y-1">
+            <p className="font-semibold text-base opacity-90">
+              Bachelor of Science in Information Technology (Honours) BSc (Hons)
+              IT.
+            </p>
+            <p className="text-sm opacity-80">
+              Asia Pacific University of Technology and Innovation (APU) —
+              2025–Present
+            </p>
+          </div>
         </motion.div>
 
         {/* Projects */}
@@ -114,14 +120,16 @@ export default function Resume_section() {
           transition={{ duration: 1 }}
           className="bg-[var(--bg-secondary)]/40 border border-[var(--border-radious)]/50 rounded-2xl p-6 shadow-lg space-y-4"
         >
-          <p className="text-xl font-semibold text-[var(--text-secondary)] ">Projects</p>
+          <p className="text-xl font-semibold text-[var(--text-secondary)] ">
+            Projects
+          </p>
           <div className="grid md:grid-cols-2 gap-12">
             {projects.map((project, index) => (
               <motion.div
                 key={index}
                 whileHover={{
-                  scale:1.05,
-                   borderColor: "var(--border-color)",
+                  scale: 1.05,
+                  borderColor: "var(--border-color)",
                   boxShadow: "var(--shadow-glow)",
                 }}
                 className="border border-[var(--border-radious)] rounded-xl p-4  cursor-pointer space-y-4  duration-500 transition-all"
@@ -129,19 +137,21 @@ export default function Resume_section() {
                 <p className="text-[var(--text-secondary)]/90 font-semibold">
                   {project.title}
                 </p>
-              
-               <div className="space-y-1">
-                 <p className="text-sm opacity-90 ">{project.description}</p>
-                <p className="text-xs text-[var(--text-secondary)]/60 italic">{project.tech}</p>
-                <a
-                  href={project.link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-[var(--text-secondary)] text-xs underline inline-block hover:text-[var(--text-secondary)]/80"
-                >
-                  View Project →
-                </a>
-               </div>
+
+                <div className="space-y-1">
+                  <p className="text-sm opacity-90 ">{project.description}</p>
+                  <p className="text-xs text-[var(--text-secondary)]/60 italic">
+                    {project.tech}
+                  </p>
+                  <a
+                    href={project.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-[var(--text-secondary)] text-xs underline inline-block hover:text-[var(--text-secondary)]/80"
+                  >
+                    View Project →
+                  </a>
+                </div>
               </motion.div>
             ))}
           </div>
@@ -152,7 +162,7 @@ export default function Resume_section() {
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 1 }}
-         className="bg-[var(--bg-secondary)]/40 border border-[var(--border-radious)]/50 rounded-2xl p-6 shadow-lg space-y-4"
+          className="bg-[var(--bg-secondary)]/40 border border-[var(--border-radious)]/50 rounded-2xl p-6 shadow-lg space-y-4"
         >
           <p className="text-xl font-semibold text-[var(--text-secondary)]">
             Certificates
@@ -172,7 +182,6 @@ export default function Resume_section() {
             whileHover={{
               scale: 1.05,
               boxShadow: "var(--shadow-glow)",
-
             }}
             className="flex items-center gap-2 bg-[var(--text-secondary)] text-[var(--tooltip-color)] font-semibold px-6 py-2 rounded-full hover:bg-transparent hover:text-[var(--text-hover)] border border-transparent hover:border-[var(--border-radious)] transition-all duration-500"
           >
