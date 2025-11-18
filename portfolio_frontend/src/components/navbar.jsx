@@ -21,7 +21,7 @@ export default function Navbar() {
     
     
     className="relative top-4 xl:px-64 lg:px-32 md:px-16 px-8 sm:px-32 flex items-center justify-center">
-      <div className="md:w-max w-full px-4 py-2 bg-gray-600/70 shadow-2xl rounded-2xl border border-cyan-600">
+      <div className="md:w-max w-full px-4 py-2 bg-[var(--bg-navbar)]/70 shadow-2xl rounded-2xl border border-[var(--border-radious)]">
 
 
         <div className="flex items-center justify-between sm:gap-8 md:gap-16 w-full">
@@ -33,7 +33,7 @@ export default function Navbar() {
               componentsProps={{
                 tooltip: {
                   sx: {
-                    bgcolor: "#0891b2", // tooltip background
+                     bgcolor: "var(--text-secondary)", // tooltip background
                     color: "black", // tooltip text
                     fontSize: "0.8rem",
                   },
@@ -53,8 +53,8 @@ export default function Navbar() {
                   size={26}
                   className={`${
                     activeIndex === index
-                      ? "text-cyan-600"
-                      : "text-white hover:text-cyan-600"
+                      ? "text-[var(--text-secondary)]"
+                      : "text-[var(--text-primary)] hover:text-[var(--text-hover)]"
                   } `}
                   strokeWidth={1}
                 />

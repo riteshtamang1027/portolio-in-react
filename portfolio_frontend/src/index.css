@@ -27,7 +27,9 @@ html.dark {
   --text-hover:oklch(78.9% 0.154 211.53);
   --border-radious:oklch(60.9% 0.126 221.723);
 --shadow-primary: 0 0 25px rgba(34, 211, 238, 0.4);
-  --bg-secondary:oklch(27.8% 0.033 256.848)
+  --bg-secondary:oklch(27.8% 0.033 256.848);
+  --bg-navbar:oklch(44.6% 0.03 256.802);
+
 
 
   /* shadow & border */
@@ -49,7 +51,8 @@ html.dark {
   --text-hover:oklch(51.1% 0.262 276.966);
   --border-radious:oklch(51.1% 0.262 276.966);
   --shadow-primary: 0 0 25px rgba(124, 58, 237, 0.35);
-  --bg-secondary:oklch(92.8% 0.006 264.531)
+  --bg-secondary:oklch(92.8% 0.006 264.531);
+  --bg-navbar:oklch(87.2% 0.01 258.338);
 
     /* shadow & border (light mode) */
   --shadow-glow: 0 0 35px rgba(130, 70, 233, 0.684);
