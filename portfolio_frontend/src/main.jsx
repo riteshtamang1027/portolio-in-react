@@ -30,7 +30,7 @@ createRoot(document.getElementById("root")).render(
           <Route path="/portfolio" element={<Portfolio_section />} />
           <Route path="/contact" element={<Contact_section />} />
         </Routes>
-        <div className="bg-[linear-gradient(to_right,var(--custom-a0),var(--custom-a10),var(--custom-a20),var(--custom-a30),var(--custom-a40))]">
+        <div className="bg-gradient -mb-10">
           <Footer_section />
         </div>
       </BrowserRouter>

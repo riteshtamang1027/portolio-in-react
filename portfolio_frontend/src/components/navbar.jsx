@@ -10,20 +10,16 @@ import { useState } from "react";
 import { Link } from "react-router";
 import { motion } from "framer-motion";
 
-
 export default function Navbar() {
   const [activeIndex, setActiveIndex] = useState(0);
   return (
-    <motion.div 
-    initial={{opacity:0, x:100}}
-    whileInView={{opacity:1, x:0}}
-    transition={{duration:1,delay:0.5}}
-    
-    
-    className="relative top-4 xl:px-64 lg:px-32 md:px-16 px-8 sm:px-32 flex items-center justify-center">
-      <div className="md:w-max w-full px-4 py-2 bg-[var(--bg-navbar)]/70 shadow-2xl rounded-2xl border border-[var(--border-radious)]">
-
-
+    <motion.div
+      initial={{ opacity: 0, x: 100 }}
+      whileInView={{ opacity: 1, x: 0 }}
+      transition={{ duration: 1, delay: 0.5 }}
+      className="relative top-5  xl:px-64 lg:px-32 md:px-16 px-8 sm:px-32 flex items-center justify-center"
+    >
+      <div className="md:w-max w-full z-20 px-4 py-2 bg-[var(--bg-navbar)]/70 shadow-2xl rounded-2xl border border-[var(--border-radious)]">
         <div className="flex items-center justify-between sm:gap-8 md:gap-16 w-full">
           {icons.map((item, index) => (
             <Tooltip
@@ -33,7 +29,7 @@ export default function Navbar() {
               componentsProps={{
                 tooltip: {
                   sx: {
-                     bgcolor: "var(--text-secondary)", // tooltip background
+                    bgcolor: "var(--text-secondary)", // tooltip background
                     color: "black", // tooltip text
                     fontSize: "0.8rem",
                   },
@@ -41,38 +37,38 @@ export default function Navbar() {
               }}
             >
               <motion.div
-              initial={{opacity:0, x:50}}
-              whileInView={{opacity:1,x:0}}
-              transition={{duration:1, delay:0.8}}
+                initial={{ opacity: 0, x: 50 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 1, delay: 0.8 }}
               >
-                <Link to={item.path}
-                onClick={() => setActiveIndex(index)}
-                className="cursor-pointer transition-transform duration-300 hover:scale-110"
-              >
-                <item.icon
-                  size={26}
-                  className={`${
-                    activeIndex === index
-                      ? "text-[var(--text-secondary)]"
-                      : "text-[var(--text-primary)] hover:text-[var(--text-hover)]"
-                  } `}
-                  strokeWidth={1}
-                />
-              </Link>
+                <Link
+                  to={item.path}
+                  onClick={() => setActiveIndex(index)}
+                  className="cursor-pointer transition-transform duration-300 hover:scale-110"
+                >
+                  <item.icon
+                    size={26}
+                    className={`${
+                      activeIndex === index
+                        ? "text-[var(--text-secondary)]"
+                        : "text-[var(--text-primary)] hover:text-[var(--text-hover)]"
+                    } `}
+                    strokeWidth={1}
+                  />
+                </Link>
               </motion.div>
             </Tooltip>
           ))}
         </div>
-
       </div>
     </motion.div>
   );
 }
 
 const icons = [
-  { icon: House, i_name: "Home",path:"/" },
-  { icon: UserRound, i_name: "About",path:"/about"  },
-  { icon: FileUser, i_name: "Resume",path:"/resume" },
-  { icon: BriefcaseBusiness, i_name: "Portfolio",path:"/portfolio" },
-  { icon: Mail, i_name: "Contact",path:"/contact" },
+  { icon: House, i_name: "Home", path: "/" },
+  { icon: UserRound, i_name: "About", path: "/about" },
+  { icon: FileUser, i_name: "Resume", path: "/resume" },
+  { icon: BriefcaseBusiness, i_name: "Portfolio", path: "/portfolio" },
+  { icon: Mail, i_name: "Contact", path: "/contact" },
 ];

@@ -24,12 +24,12 @@ export default function Footer_section() {
       initial={{ opacity: 0, y: 80 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 1, delay: 0.5 }}
-      className="bg-gradient-to-r from-cyan-900/70 via-cyan-800/70 -mb-10 to-cyan-900/70 text-gray-300 py-12 xl:px-64 lg:px-32 md:px-16 px-4 sm:px-32"
+      className="footer-gradient  text-[var(--text-primary)]/70 py-12 xl:px-64 lg:px-32 md:px-16 px-4 sm:px-32"
     >
       <div className="w-full justify-between  grid  lg:grid-cols-4 sm:grid-cols-2 grid-cols-1 lg:gap-10 gap-x-24 gap-y-16">
         {/* Brand & Tagline */}
         <div className="space-y-4">
-          <p className="text-2xl font-bold text-cyan-400 whitespace-nowrap">
+          <p className="text-2xl font-bold text-[var(--text-secondary)] whitespace-nowrap">
             Ritesh Tamang
           </p>
           <p className=" text-sm">
@@ -41,7 +41,7 @@ export default function Footer_section() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 1 }}
           >
-            <p className="text-gray-400 text-xs">
+            <p className="text-[var(--text-primary)]/60 gray-400 text-xs">
               Building clean, responsive, and interactive web apps.
             </p>
           </motion.div>
@@ -49,7 +49,7 @@ export default function Footer_section() {
 
         {/* Quick Links */}
         <div className="space-y-4">
-          <p className="font-semibold text-cyan-300 uppercase tracking-wider text-sm">
+          <p className="font-semibold text-[var(--text-hover)] uppercase tracking-wider text-sm">
             Quick Links
           </p>
           <div className="flex flex-col gap-3">
@@ -61,13 +61,13 @@ export default function Footer_section() {
               >
                 {/* Icons */}
                 <div className="flex items-center  gap-2 group-hover:scale-110 transition-all duration-500">
-                  <item.icon className="w-4 h-4 group-hover:text-cyan-600 transition-all duration-500 " />
+                  <item.icon className="w-4 h-4 group-hover:text-[var(--text-secondary)] transition-all duration-500 " />
                   {/* names */}
                   <div className="text-sm  flex items-center gap-0.5">
-                    <p className="group-hover:text-cyan-500 text-sm duration-500 transition-all ">
+                    <p className="group-hover:text-[var(--text-secondary)] text-sm duration-500 transition-all ">
                       {item.i_name}
                     </p>
-                    <ArrowUpRight className="w-4 h-4 group-hover:text-cyan-600 mt-1 duration-500 origin-center group-hover:rotate-45 " />
+                    <ArrowUpRight className="w-4 h-4 group-hover:text-[var(--text-secondary)] mt-1 duration-500 origin-center group-hover:rotate-45 " />
                   </div>
                 </div>
               </Link>
@@ -77,17 +77,17 @@ export default function Footer_section() {
 
         {/* Social Media */}
         <div className="space-y-4">
-          <p className="font-semibold text-cyan-300 uppercase tracking-wider text-sm">
+          <p className="font-semibold text-[var(--text-hover)] uppercase tracking-wider text-sm">
             Connect
           </p>
           <div className="flex flex-col gap-2  w-max">
             {socialIcons.map((icon, index) => (
               <Link to={icon.url} key={index} className="group">
                 <div className="flex items-center group-hover:scale-110 duration-300 transition-all origin-center cursor-pointer -ml-1 gap-1">
-                  <motion.div className="text-gray-300 group-hover:text-cyan-400 transition-all duration-300 text-xl p-2 rounded-full group-hover:bg-cyan-700/20 ">
-                    <icon.icon className="w-4 h-4 group-hover:text-cyan-600" />
+                  <motion.div className="text-[var(--text-primary)]/70 group-hover:text-[var(--text-secondary)]transition-all duration-300 text-xl p-2 rounded-full group-hover:bg-[var(--footer-bg_hover)]/20 ">
+                    <icon.icon className="w-4 h-4 group-hover:text-[var(--text-secondary)]" />
                   </motion.div>
-                  <p className="text-sm group-hover:text-cyan-600 duration-300">
+                  <p className="text-sm group-hover:text-[var(--text-secondary)] duration-300">
                     {icon.s_name}
                   </p>
                 </div>
@@ -98,7 +98,7 @@ export default function Footer_section() {
 
         {/* Contact / Newsletter */}
         <div className="space-y-4">
-          <p className="font-semibold text-cyan-300 uppercase tracking-wider text-sm">
+          <p className="font-semibold text-[var(--text-hover)] uppercase tracking-wider text-sm">
             Get in Touch
           </p>
           <p className=" text-sm">
