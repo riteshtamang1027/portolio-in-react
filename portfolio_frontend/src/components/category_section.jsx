@@ -4,12 +4,12 @@ import { Code, Layout, Server } from "lucide-react"; // Example icons, you can c
 
 export default function Category_section() {
   return (
-    <div className="text-white    w-full space-y-8">
+    <div className="text-[var(--text-primary)]   w-full space-y-8">
       <motion.p
         initial={{ opacity: 0, y: -20 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 1 }}
-        className="text-3xl md:text-4xl font-bold text-cyan-500 text-center "
+        className="text-3xl md:text-4xl font-bold text-[var(--text-secondary)] text-center "
       >
         My Expertise
       </motion.p>
@@ -21,10 +21,14 @@ export default function Category_section() {
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 1.2 }}
-            className="bg-[linear-gradient(to_right,var(--custom-a0),var(--custom-a10),var(--custom-a20))] border border-cyan-600 rounded-2xl shadow-2xl p-6 flex flex-col items-start gap-4 hover:scale-105 transition-all duration-500 cursor-pointer"
+            className="bg-gradient border border-[var(--border-radious)] rounded-2xl shadow-2xl p-6 flex flex-col items-start gap-4 hover:scale-105 transition-all duration-500 cursor-pointer"
           >
-            <div className="flex items-center gap-4">{category.icon}</div>
-            <p className="text-xl font-bold text-cyan-500 whitespace-nowrap">{category.title}</p>
+            <div className="flex items-center text-[var(--text-secondary)] gap-4">
+              <category.icon size={28}/>
+              {/* {category.icon} */}
+
+            </div>
+            <p className="text-xl font-bold text-[var(--text-secondary)] whitespace-nowrap">{category.title}</p>
             <p className="text-sm font-medium opacity-80 ">
               {category.description}
             </p>
@@ -41,20 +45,20 @@ const categories = [
     title: "Frontend Development",
     description:
       "Building responsive and interactive web interfaces using React, Next.js, and Tailwind CSS.",
-    icon: <Code size={28} className="text-cyan-500" />,
+    icon:Code ,
   },
   {
     id: 2,
     title: "UI/UX Design",
     description:
       "Creating clean and modern designs, focusing on user experience and visual appeal.",
-    icon: <Layout size={28} className="text-cyan-500" />,
+    icon:Layout ,
   },
   {
     id: 3,
     title: "Backend Development",
     description:
       "Working with APIs, databases, and server-side logic to build full-stack applications.",
-    icon: <Server size={28} className="text-cyan-500" />,
+    icon:Server ,
   },
 ];
