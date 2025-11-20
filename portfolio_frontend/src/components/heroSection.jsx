@@ -2,7 +2,7 @@
 import { Typewriter } from "react-simple-typewriter";
 import { motion } from "framer-motion";
 import { Link } from "react-router";
-import img1 from '../../public/images/image1.jpg'
+import img1 from '../../public/images/img5.jpeg'
 
 export default function HeroSection() {
   return (
