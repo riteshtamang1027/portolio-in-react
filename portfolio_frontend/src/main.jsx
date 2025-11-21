@@ -12,6 +12,7 @@ import Portfolio_section from "./pages/portfolio_page.jsx";
 import Footer_section from "./components/footer_section.jsx";
 import { Theme_provider } from "./theme_provider.jsx";
 import Theme_toggle from "./components/theme_toggle.jsx";
+import Lgin_page from "./admin/login_page.jsx";
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
@@ -25,6 +26,7 @@ createRoot(document.getElementById("root")).render(
        </div>
         <Routes>
           <Route path="/" element={<App />} />
+          <Route path="/admin" element={<Lgin_page />} />
           <Route path="/about" element={<AboutSection />} />
           <Route path="/resume" element={<Resume_section />} />
           <Route path="/portfolio" element={<Portfolio_section />} />

@@ -24,9 +24,9 @@ export default function Footer_section() {
       initial={{ opacity: 0, y: 80 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 1, delay: 0.5 }}
-      className="footer-gradient  text-[var(--text-primary)]/70 py-12 xl:px-64 lg:px-32 md:px-16 px-4 sm:px-32"
+      className="footer-gradient text-[var(--text-primary)]/70 py-12 xl:px-64 lg:px-32 md:px-16 px-4 sm:px-32"
     >
-      <div className="w-full justify-between  grid  lg:grid-cols-4 sm:grid-cols-2 grid-cols-1 lg:gap-10 gap-x-24 gap-y-16">
+      <div className="w-full justify-between  grid  lg:grid-cols-4 sm:grid-cols-2 grid-cols-1 lg:gap-10 gap-x-24 sm:gap-y-16 gap-y-8">
         {/* Brand & Tagline */}
         <div className="space-y-4">
           <p className="text-2xl font-bold text-[var(--text-secondary)] whitespace-nowrap">

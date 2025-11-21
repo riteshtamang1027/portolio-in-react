@@ -36,13 +36,13 @@ export default function AboutSection() {
      <div className="text-[var(--text-primary)] flex flex-col lg:flex-row items-center gap-12  justify-between ">
        {/* Profile Image */}
 
-      <div className="flex  flex-col items-center justify-center md:w-120 w-88 sm:w-100  gap-8">
+      <div className="flex  flex-col items-center justify-center md:w-120 w-88 sm:w-100  sm:gap-8 gap-4">
        {/* main top images container */}
        <motion.div
        initial={{opacity:0, x:-100}}
        whileInView={{opacity:1, x:0}}
        transition={{duration:1}}
-       className="w-full md:h-88 flex-shrink-0 "
+       className="w-full md:h-88 sm:h-66 h-60 flex-shrink-0 "
        >
          <Swiper
           // spaceBetween={10}
