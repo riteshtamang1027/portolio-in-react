@@ -8,9 +8,15 @@ const app = express();
 // mongoDB connection
 connectDB();
 
+
+
+
+
 app.get("/", (req, res) => {
   res.send("Hello World!");
 });
+
+
 
 
 
