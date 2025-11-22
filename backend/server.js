@@ -1,21 +1,21 @@
 import express from "express";
-import mongoose from "mongoose";
+import connectDB from "./src/db.js";
+import dotenv from "dotenv";
+dotenv.config();
 
 const app = express();
 
-try {
-  mongoose.connect(
-    "mongodb+srv://riteshtamang1027_db_user:oxJhRSA1ZSWuiIHx@cluster0.yiawzdq.mongodb.net/?appName=Cluster0"
-  );
-  console.log("MongoDB connected successfully.");
-} catch (error) {
-  console.log("Connected failed.", error);
-}
+// mongoDB connection
+connectDB();
 
 app.get("/", (req, res) => {
   res.send("Hello World!");
 });
 
-app.listen(4000, () => {
-  console.log("The Server is running at http://localhost:4000");
+
+
+app.listen(process.env.APP_PORT, () => {
+  console.log(
+    `The Server is running at http://localhost:${process.env.APP_PORT}`
+  );
 });
