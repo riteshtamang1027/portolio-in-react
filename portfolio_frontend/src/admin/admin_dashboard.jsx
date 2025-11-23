@@ -1,11 +1,10 @@
-import { RedirectToSignIn, SignedOut, SignOutButton } from "@clerk/clerk-react";
-import React from "react";
+import { SignOutButton } from "@clerk/clerk-react";
 
 export default function Admin_dashboard() {
   return (
     <div className="min-h-screen p-10 bg-gray-100">
       <div className="flex justify-between items-center mb-8">
-        <h1 className="text-3xl font-bold">Admin Dashboard</h1>
+        <p className="text-3xl font-bold">Admin Dashboard</p>
 
         <SignOutButton className="border text-base font-semibold  border-gray-400 px-4 py-2 rounded-xl text-white bg-red-600 cursor-pointer">
           <span className="">Log Out</span>
