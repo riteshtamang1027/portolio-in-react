@@ -1,10 +1,9 @@
-// import React, { useState } from "react";
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import "./index.css";
 
 import App from "./App.jsx";
-import { BrowserRouter, Route, Routes } from "react-router";
+import { BrowserRouter, Route, Routes, useLocation } from "react-router";
 import AboutSection from "./pages/about_page.jsx";
 import Navbar from "./components/navbar.jsx";
 import Resume_section from "./pages/resume_section.jsx";
@@ -13,7 +12,6 @@ import Portfolio_section from "./pages/portfolio_page.jsx";
 import Footer_section from "./components/footer_section.jsx";
 import { Theme_provider } from "./theme_provider.jsx";
 import Theme_toggle from "./components/theme_toggle.jsx";
-// import Lgin_page from "./admin/login_page.jsx";
 import Admin_dashboard from "./admin/admin_dashboard.jsx";
 import { ClerkProvider } from "@clerk/clerk-react";
 import Admin_route from "./components/adminRoute.jsx";
@@ -26,42 +24,63 @@ if (!PUBLISHABLE_KEY) {
 }
 
 export default function Main() {
-  // const [IsAdmin, setIsAdmin] = useState(false);
+  // const location = useLocation();
   return (
     <StrictMode>
       <Theme_provider>
-        <BrowserRouter>
-          <div className="sticky top-0 z-10 footer-gradient">
-            <Navbar />
-          </div>
-          <div className="fixed md:right-1/12 right-8 top-1/2 -translate-y-1/2 z-50">
-            <Theme_toggle />
-          </div>
-          <ClerkProvider publishableKey={PUBLISHABLE_KEY}>
-            <Routes>
-              <Route path="/" element={<App />} />
-              <Route
-                path="/admin"
-                element={
-                  <Admin_route>
-                    <Admin_dashboard />
-                  </Admin_route>
-                }
-              />
-              <Route path="/about" element={<AboutSection />} />
-              <Route path="/resume" element={<Resume_section />} />
-              <Route path="/portfolio" element={<Portfolio_section />} />
-              <Route path="/contact" element={<Contact_section />} />
-            </Routes>
-          </ClerkProvider>
-          <div className="bg-gradient -mb-10">
-            <Footer_section />
-          </div>
-        </BrowserRouter>
-        ,
+        <ClerkProvider publishableKey={PUBLISHABLE_KEY}>
+          <BrowserRouter>
+            <App_content />
+          </BrowserRouter>
+          ,
+        </ClerkProvider>
       </Theme_provider>
     </StrictMode>
   );
 }
 
-createRoot(document.getElementById("root")).render(<Main></Main>);
+const App_content = () => {
+  const location = useLocation();
+  const isAdminpage = location.pathname.startsWith("/admin");
+  return (
+    <>
+      {/* show navbar  only  if not admin page */}
+      {!isAdminpage && (
+        <div className="sticky top-0 z-10 footer-gradient">
+          <Navbar />
+        </div>
+      )}
+      {/* show theme toggle  only  if not admin page */}
+      {!isAdminpage && (
+        <div className="fixed md:right-1/12 right-8 top-1/2 -translate-y-1/2 z-50">
+          <Theme_toggle />
+        </div>
+      )}
+
+      <Routes>
+        <Route path="/" element={<App />} />
+        <Route
+          path="/admin"
+          element={
+            <Admin_route>
+              <Admin_dashboard />
+            </Admin_route>
+          }
+        />
+        <Route path="/about" element={<AboutSection />} />
+        <Route path="/resume" element={<Resume_section />} />
+        <Route path="/portfolio" element={<Portfolio_section />} />
+        <Route path="/contact" element={<Contact_section />} />
+      </Routes>
+      {/* show footer  only  if not admin page */}
+
+      {!isAdminpage && (
+        <div className="bg-gradient -mb-10">
+          <Footer_section />
+        </div>
+      )}
+    </>
+  );
+};
+
+createRoot(document.getElementById("root")).render(<Main />);

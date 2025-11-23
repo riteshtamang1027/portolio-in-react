@@ -1,16 +1,15 @@
+import { RedirectToSignIn, SignedOut, SignOutButton } from "@clerk/clerk-react";
 import React from "react";
 
-export default function Admin_dashboard({ setIsAdmin }) {
+export default function Admin_dashboard() {
   return (
     <div className="min-h-screen p-10 bg-gray-100">
       <div className="flex justify-between items-center mb-8">
         <h1 className="text-3xl font-bold">Admin Dashboard</h1>
-        <button
-          onClick={() => setIsAdmin(false)}
-          className="px-4 py-2 bg-red-500 text-white rounded hover:bg-red-400"
-        >
-          Logout
-        </button>
+
+        <SignOutButton className="border text-base font-semibold  border-gray-400 px-4 py-2 rounded-xl text-white bg-red-600 cursor-pointer">
+          <span className="">Log Out</span>
+        </SignOutButton>
       </div>
 
       <div className="grid grid-cols-3 gap-6">
