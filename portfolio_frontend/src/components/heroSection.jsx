@@ -5,6 +5,11 @@ import { Link } from "react-router";
 import img1 from '../../public/images/img5.jpeg'
 
 export default function HeroSection() {
+  
+const fetchuserProfile = ()=>{
+  
+}
+
   return (
     <div className="text-[var(--text-primary)]">
       {/* main container */}
