@@ -6,10 +6,18 @@ import { protfolio_profile } from "../models/profile_schema.js";
 // Create user profile
 export const create_profile = async (req, res) => {
   try {
-    const file = req.file;
-    const cloudinaryResponse = await cloudinary.uploader.upload(file.path);
+    // check user exist or not
+    const existProfile = await protfolio_profile.findOne();
+    if (existProfile) {
+      return res.status(400).json({
+        message: "Profile already created. You can only update it.",
+      });
+    }
+    // const file = req.file;
+    const cloudinaryResponse = await cloudinary.uploader.upload(req.file.path);
 
-    const new_create_profile = await new protfolio_profile({
+    // create user profile
+    const new_create_profile = await new protfolio_profile.create({
       ...req.body,
       profile_picture: cloudinaryResponse.secure_url,
     }).save();
@@ -25,13 +33,13 @@ export const create_profile = async (req, res) => {
 };
 
 // get all user data
-export const getAllUser = async (req, res) => {
+export const getUser = async (req, res) => {
   try {
-    const getalluser = await protfolio_profile.find();
+    const getuser = await protfolio_profile.findOne();
 
     return res.status(200).json({
       message: "User data fetched successfully.",
-      data: getalluser,
+      data: getuser,
     });
   } catch (error) {
     console.error(error);
@@ -45,6 +53,14 @@ export const getAllUser = async (req, res) => {
 // update section
 export const updateuserinfo = async (req, res) => {
   try {
+    // check user exist or not
+    const checkuser = await protfolio_profile.findOne();
+    if (!checkuser) {
+      return res.status(404).json({
+        message: "No profile found to update.",
+      });
+    }
+
     let updateusr = { ...req.body };
 
     // image or file update section
@@ -78,28 +94,5 @@ export const updateuserinfo = async (req, res) => {
       message: "Internal server error",
       error: error.message,
     });
-  }
-};
-
-// delete section
-export const delete_userprofile = async (req, res) => {
-  try {
-    const deleteProfile = await protfolio_profile.findByIdAndDelete(
-      req.params.id
-    );
-
-    if (!deleteProfile) {
-      return res.status(404).json({
-        message: "user data not found",
-      });
-    }
-
-    return res.status(200).json({
-      message: "Data deleted successfully.",
-      data: deleteProfile,
-    });
-  } catch (error) {
-    console.log(error);
-    return res.status(500).json("Internal server error.", error);
   }
 };
