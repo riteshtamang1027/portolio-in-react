@@ -12,7 +12,7 @@ export default function HeroSection() {
   
 const fetchuserProfile =async ()=>{
   try {
-    const Response = await axios.get("http://localhost:4000/profile");
+    const Response = await axios.get(`${import.meta.env.VITE_BACKEND_SERVER}/profile`);
     console.log(Response.data.data)
     setUser(Response.data.data)
     
