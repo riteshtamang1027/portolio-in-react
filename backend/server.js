@@ -20,11 +20,12 @@ app.use(
   cors({
     origin: [
       "http://localhost:5173",
-      "https://portfoliobasedonreactjs.vercel.app",
+      "https://portfoliobasedonreactjs-nwgujow47-ritesh-tamangs-projects.vercel.app"
     ],
     credentials: true,
   })
 );
+
 
 // profile route
 app.use("/profile", profile_route);
